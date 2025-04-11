@@ -1,1 +1,45 @@
+body {
+    background-color: #e7f1fd;
+    margin-right: 64px;
+    margin-left: 64p;
+  }
+  h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 60px;
+    color: rgb(20, 96, 157);
+    text-align: left;
+    white-space: nowrap;
+  }
+  
+  h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 48px;
+    color: rgb(43, 67, 173);
+    text-align: left;
+    white-space: nowrap;
+  }
 
+  h3 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 32px;
+    color: rgb(43, 67, 173);
+    width: 250px;
+    height: 45px;
+    white-space: nowrap;
+  }
+
+  h4 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    text-align: left;
+    white-space: nowrap;
+  }
+
+  section {
+    border: 2px solid white;  width: 550px; height: 150px;
+  }
+
+  p {
+    color: rgb(66, 94, 185);
+  }
