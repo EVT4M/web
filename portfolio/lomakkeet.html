@@ -14,7 +14,7 @@
             <li><a href="../portfolio/portfolio.html">Portfolio</a></li>
             <li><a href="../työkokemus.html">Työkokemus</a></li>
         </ul>
-        <button id="openDialogBtn">Kommentoi</button>
+        <a href="#" class="btn" id="openDialogBtn">Kommentoi</a>
         <dialog id="commentDialog">
             <form method="dialog">
                 <label for="Synttärit">Syntymäpäivä:</label><br>
@@ -37,7 +37,7 @@
                 <label for="vehicle3">Hyväksyn olevan hassu</label><br><br>
         
                 <button type="submit" onclick="alert('Kommentti lähetetty!')">Lähetä</button>
-                <button type="button" id="closeDialogBtn">Peruuta</button>
+                <a href="#" class="btn" id="closeDialogBtn">Peruuta</a>
             </form>
         </dialog>
         
@@ -46,11 +46,13 @@
             const openBtn = document.getElementById('openDialogBtn');
             const closeBtn = document.getElementById('closeDialogBtn');
         
-            openBtn.addEventListener('click', () => {
+            openBtn.addEventListener('click', (e) => {
+                e.preventDefault();
                 dialog.showModal();
             });
         
-            closeBtn.addEventListener('click', () => {
+            closeBtn.addEventListener('click', (e) => {
+                e.preventDefault();
                 dialog.close();
             });
         </script>
