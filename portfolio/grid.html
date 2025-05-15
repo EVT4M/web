@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <br>
+    <br>
+    <style>
+.container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "mainnav mainnav"
+    "sidenav content"
+    "footer footer";
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 50px 50px 200px 50px; 
+  gap: 2px;
+  background-color: #000000;
+  padding: 5px;
+  max-width: 800px; 
+  margin: auto; 
+}
+
+.container > div {
+  background-color: rgb(215, 215, 215);
+  padding: 5px;
+  font-size: 15px;
+  text-align: left;
+  border: 1px solid black;
+}
+
+.header {
+  grid-area: header;
+  text-align: center;
+}
+
+.mainnav {
+  grid-area: mainnav;
+}
+
+.sidenav {
+  grid-area: sidenav;
+}
+
+.content {
+  grid-area: content;
+}
+
+.footer {
+  grid-area: footer;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+    <div class="container">
+  <div class="header"><h2>Eveliina Tamlander</h2></div>
+  <div class="mainnav">17-vuotias ja valmis elämään!</div>
+  <div class="sidenav">            
+    <ul>
+        <li><a href=portfolio.html>Takaisin portfolioon.</a></li>
+    </ul></div>
+  <div class="content">
+    <p>Olen rauhallinen henkilö, joka rakastaa ruokaa, katsoa peiliin ja elää elämää.</p>
+  </div>
+  <div class="footer"><h4>15.5.2025</h4></div>
+</div>
+</body>
+</html>
