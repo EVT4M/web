@@ -6,66 +6,103 @@
     <title>Document</title>
     <br>
     <br>
-    <style>
+    <style type="text/css">
+      * {
+        box-sizing: border-box
+      }
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
 .container {
   display: grid;
-  grid-template-areas:
+    grid-template-areas:
     "header header"
-    "mainnav mainnav"
-    "sidenav content"
+    "nav nav"
+    "aside main"
     "footer footer";
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: 50px 50px 200px 50px; 
-  gap: 2px;
-  background-color: #000000;
-  padding: 5px;
-  max-width: 800px; 
-  margin: auto; 
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-columns: 200px 1fr;
+  max-width: 1000px;
+  height: 100vh;
+  margin: 0 auto;
+  background-color: rgb(253, 164, 207);
+  border: 2px solid black;
+  font-size: 20px;
 }
-
-.container > div {
-  background-color: rgb(215, 215, 215);
-  padding: 5px;
-  font-size: 15px;
-  text-align: left;
-  border: 1px solid black;
-}
-
-.header {
+header {
   grid-area: header;
-  text-align: center;
+  grid-column: 1 / -1;
+  padding: 1em;
+  border-bottom: 2px solid black;
 }
-
-.mainnav {
-  grid-area: mainnav;
+header h1 {
+  margin-bottom: 1em;
 }
-
-.sidenav {
-  grid-area: sidenav;
+.top-nav {
+  margin-left: 2em;
 }
-
-.content {
-  grid-area: content;
+.top-nav a {
+  margin-right: 3em;
 }
-
-.footer {
+aside {
+  padding: 2em 0 0 3em;
+  display: flex;
+  flex-direction: column;
+  border-right: 2px solid black;
+}
+aside a {
+  margin: 0 0 2em 3em;
+}
+main {
+  padding: 5em 0em 3em 3em;
+}
+main h2 {
+  grid-area: main;
+  margin-bottom: 1em;
+}
+footer {
   grid-area: footer;
-  text-align: center;
+  grid-column: 1 / -1;
+  padding: 3em;
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  border-top: 2px solid black;
+}
+footer a {
+  margin-bottom: 3em;
 }
 </style>
 </head>
 <body>
-    <div class="container">
-  <div class="header"><h2>Eveliina Tamlander</h2></div>
-  <div class="mainnav">17-vuotias ja valmis elämään!</div>
-  <div class="sidenav">            
-    <ul>
-        <li><a href=portfolio.html>Takaisin portfolioon.</a></li>
-    </ul></div>
-  <div class="content">
-    <p>Olen rauhallinen henkilö, joka rakastaa ruokaa, katsoa peiliin ja elää elämää.</p>
+  <div class="container">
+    <header>
+      <h1>Eveliina TIEV24N</h1>
+      <nav class="top-nav">
+        <a>Olen</a>
+        <a>17 vuotta</a>
+        <a>vanha</a>
+      </nav>
+    </header>
+    <aside>
+      <a href="portfolio.html">Linkki portfolioon</a>
+      <a href="https://taito.edu.turku.fi/my/courses.php">Linkki moodleen</a>
+      <a href="https://turku.inschool.fi/login?invalidsession&returnpath=login">Linkki Wilmaan</a>
+    </aside>
+    <main>
+      <h2>Minä tykkään...</h2>
+      <p>Pupuista</p>
+      <p>Musiikista</p>
+      <p>Muodista</p>
+    </main>
+    <footer>
+      <a href="https://tai.fi/">TAI:n sivu</a>
+      <a href="https://taito.edu.turku.fi/my/courses.php">Moodle</a>
+      <a href="https://turku.inschool.fi/login?invalidsession&returnpath=login">Wilma</a>
+    </footer>
   </div>
-  <div class="footer"><h4>15.5.2025</h4></div>
-</div>
+</body>
 </body>
 </html>
