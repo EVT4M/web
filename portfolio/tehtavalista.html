@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tehtävälista</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 2rem; }
+    nav a { margin-right: 1rem; text-decoration: none; color: #0366d6; }
+    nav a.selected { font-weight: 700; text-decoration: underline; }
+    .row { display: flex; gap: .5rem; margin-top: 1rem; }
+    input[type="text"] { flex: 1; padding: .5rem; }
+    button { padding: .5rem .9rem; cursor: pointer; }
+    ul { margin-top: 1rem; padding-left: 1.2rem; }
+  </style>
+</head>
+<body>
+
+  <h1>Tehtävälista</h1>
+
+  <ul id="tehtavalista"></ul>
+
+  <div class="row">
+    <input id="uusiTehtava" type="text" placeholder="Kirjoita uusi tehtävä..." />
+    <button onclick="lisaa()">Lisää</button>
+  </div>
+
+  <script src="tehtavalista.js" defer></script>
+</body>
+</html>
